@@ -11,17 +11,18 @@ Few points to be remembered while working on Go Modules
 6. Any folder named as internal will be internal to the module and which cannot be accessed by others outside the module (way to control  external access)
 7. GOPROXY -> <ul>direct or empty string - directly download the dependencies from the path mentioned in import</ul>
               <ul>off - dont download the dependencies</ul>
-            <ul> <any proxy url> - dowload from that proxy server</ul>
+              <ul>any proxy url - dowload from that proxy server</ul>
 8. Create the module : go mod init <path to your module directoy>      (path is only required if your module folder is in different location from GOPATH)
 9. go build -> build the module and generate the executable file for the module
 10. go run -> run the go files and for this you have to pass all the main package files
-11. vendor : It will have the local copy of all the external import files
-             To create the vendor , we have to use the command go mod vendor
-             When using modules, GOPATH is no longer used for resolving imports.
+11. vendor :
+      * It will have the local copy of all the external import files
+      * To create the vendor , we have to use the command go mod vendor
+      * When using modules, GOPATH is no longer used for resolving imports.
 However, it is still used to store downloaded source code (in GOPATH/pkg/mod)
 and compiled commands (in GOPATH/bin)
-              When you build the go module , it will take the files from GOPATH/pkg/mod
-              To look into vendor instead GOPATH/pkg/mod , you have to use the command go build -mod vendor
+      * When you build the go module , it will take the files from GOPATH/pkg/mod
+      * To look into vendor instead GOPATH/pkg/mod , you have to use the command go build -mod vendor
 12. go install -> which also create the executable file but in GOPATH/bin location
 13. go.sum file which will have the checksum of all the imported external dependencies
 14. go.mod file which contain the imported external dependencies verison information and go version
