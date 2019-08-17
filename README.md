@@ -19,8 +19,8 @@ Few points to be remembered while working on Go Modules
       * It will have the local copy of all the external import files
       * To create the vendor , we have to use the command go mod vendor
       * When using modules, GOPATH is no longer used for resolving imports.
-However, it is still used to store downloaded source code (in GOPATH/pkg/mod)
-and compiled commands (in GOPATH/bin)
+However, it is still used to store downloaded source code (in GOPATH/pkg/mod/)
+and compiled commands (in GOPATH/bin)(for normal projects it will take from GOPATH/src/)
       * When you build the go module , it will take the files from GOPATH/pkg/mod
       * To look into vendor instead GOPATH/pkg/mod , you have to use the command go build -mod vendor
 12. go install -> which also create the executable file but in GOPATH/bin location
