@@ -9,7 +9,7 @@ Few points to be remembered while working on Go Modules
    Consider you have the module as employee-service , all the packages under the folder will be of same package and if you want to have another package name , create the folder under employee-service and then create the file with different package name
 5. Package name for the test files can follow same package as file (internal test files) or new package name as <package name of the file>_test (external test file)
 6. Any folder named as internal will be internal to the module and which cannot be accessed by others outside the module (way to control  external access)
-7. GOPROXY -> direct or empty string - directly download the dependencies from the path mentioned in import
+7. GOPROXY -> <ul>direct or empty string - directly download the dependencies from the path mentioned in import</ul>
               off - dont download the dependencies
              <any proxy url> - dowload from that proxy server
 8. Create the module : go mod init <path to your module directoy>      (path is only required if your module folder is in different location from GOPATH)
