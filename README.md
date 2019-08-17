@@ -33,7 +33,7 @@ and compiled commands (in GOPATH/bin)(for normal projects it will take from GOPA
 17. we cannot import the folder and only can import the package
 18. To get the modules with version, we can execute the command as go get <path to the location>@v1.3.4
 19. Versioning is important and so when we push the files to github, please do tagging
-    $ git tag v1.0.0
-    $ git push --tags
+   *  $ git tag v1.0.0
+   *  $ git push --tags
                
           
