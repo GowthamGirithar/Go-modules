@@ -30,5 +30,10 @@ and compiled commands (in GOPATH/bin)(for normal projects it will take from GOPA
 16. Semantic Import Versioning : 
                Go follows version in major.minor.patch format. Major increments only if there are no backward compatability , minor for new feature , patch for bug fixes.
                When we do the major changes , version will be incremented and packages should have different structure.(for version 2.0.0 , it should have /v2 folder structure - no need any version importing till v2)
+17. we cannot import the folder and only can import the package
+18. To get the modules with version, we can execute the command as go get <path to the location>@v1.3.4
+19. Versioning is important and so when we push the files to github, please do tagging
+    $ git tag v1.0.0
+    $ git push --tags
                
           
