@@ -10,8 +10,8 @@ Few points to be remembered while working on Go Modules
 5. Package name for the test files can follow same package as file (internal test files) or new package name as <package name of the file>_test (external test file)
 6. Any folder named as internal will be internal to the module and which cannot be accessed by others outside the module (way to control  external access)
 7. GOPROXY -> <ul>direct or empty string - directly download the dependencies from the path mentioned in import</ul>
-              off - dont download the dependencies
-             <any proxy url> - dowload from that proxy server
+              <ul>off - dont download the dependencies</ul>
+            <ul> <any proxy url> - dowload from that proxy server</ul>
 8. Create the module : go mod init <path to your module directoy>      (path is only required if your module folder is in different location from GOPATH)
 9. go build -> build the module and generate the executable file for the module
 10. go run -> run the go files and for this you have to pass all the main package files
