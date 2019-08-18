@@ -1,4 +1,4 @@
-module C:\Users\I340724\IdeaProjects\employee-service
+module employee-service
 
 go 1.12
 
