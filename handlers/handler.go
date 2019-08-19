@@ -26,6 +26,7 @@ func HandleFunction(route *mux.Router) {
 func authenticate(next http.HandlerFunc) http.Handler {
 	return http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
 		if validateUser(request) {
+			request.Header.Set("ValidUser", "YES") // JUST FOR TESTING DEMO
 			next.ServeHTTP(writer, request)
 		} else {
 			writer.WriteHeader(http.StatusUnauthorized)
@@ -37,8 +38,11 @@ func authenticate(next http.HandlerFunc) http.Handler {
 
 //validate the user credential which is form of base64 encoded
 func validateUser(request *http.Request) bool {
-	authValue := request.Header.Get("Authorization")
-	decodedValue, err := base64.StdEncoding.DecodeString(authValue)
+	authValue := request.Header.Get("Authorization") // Basic <value>
+	if authValue == "" {
+		return false
+	}
+	decodedValue, err := base64.StdEncoding.DecodeString(strings.Split(authValue, " ")[1])
 	if err != nil {
 		return false
 	}
