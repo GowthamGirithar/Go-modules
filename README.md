@@ -35,5 +35,9 @@ and compiled commands (in GOPATH/bin)(for normal projects it will take from GOPA
 19. Versioning is important and so when we push the files to github, please do tagging
    *  $ git tag v1.0.0
    *  $ git push --tags
+   
+# Testing in Go
+
+Please have a look into test cases for handlers, models to understand the same (comments are added for learning)
                
           
