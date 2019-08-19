@@ -35,5 +35,11 @@ and compiled commands (in GOPATH/bin)(for normal projects it will take from GOPA
 19. Versioning is important and so when we push the files to github, please do tagging
    *  $ git tag v1.0.0
    *  $ git push --tags
+   
+# Testing in Go
+
+Please have a look into test cases for handlers, models to understand the same (comments are added for learning)
+
+Consider that you have a method to parse the excel data and in test you should have the sample files. Go recommends creating a testdata directory inside your package.This directory is ignored when you run or build your package using standard go command.
                
           
