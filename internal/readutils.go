@@ -6,9 +6,13 @@ import (
 	"strings"
 )
 
+type ReadDataService interface {
+	ReadData(reader io.Reader)
+}
+
 //read the data from the reader and send the data in form of string
 //can read data from anywhere not only from file
-func readData(reader io.Reader) string {
+func ReadData(reader io.Reader) string {
 	var message strings.Builder
 	scan := bufio.NewScanner(reader)
 	for scan.Scan() {
