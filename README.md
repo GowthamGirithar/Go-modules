@@ -46,6 +46,11 @@ Consider that you have a method to parse the excel data and in test you should h
 * go test ./...  -> executes test which matches for all the directory
 * go test ./... -cover -> displays coverage
 
+# Go Document
+
+Currently (as of 19/8/2019) go document cannot read the modules outside of the GOPATH. so, if you want to see the document, place the module in GOPATH/src/  and run the command from your workspace 
+
+C:\Users\<>\IdeaProjects\employee-service>godoc -http :8000 
 
                
           
