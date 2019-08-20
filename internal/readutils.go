@@ -1,4 +1,4 @@
-package fileUtils
+package readUtils
 
 import (
 	"bufio"
