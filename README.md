@@ -52,5 +52,9 @@ Currently (as of 19/8/2019) go document cannot read the modules outside of the G
 
 C:\Users\<>\IdeaProjects\employee-service>godoc -http :8000 
 
+Internal packages will not be displayed in go document
+
+You can show examples of how to use the method. Example method will start with the keyword Exampe followed by method name. It will be placed in test files. (refer fileUtils package)
+
                
           
