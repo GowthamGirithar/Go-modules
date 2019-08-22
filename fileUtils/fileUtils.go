@@ -8,9 +8,9 @@ import (
 
 //this functionality is mainly to teach testing with mock
 func ReadFile(fileName string) (string, error) {
-	file, err := os.Open("test.txt") // readonly file
+	file, err := os.Open(fileName) // readonly file
 	defer file.Close()
-	if err == nil {
+	if err != nil {
 		return "", errors.New("Error in opering file")
 	}
 	data := readUtils.ReadData(file) // *file return by os.Open implement the io reader interface
