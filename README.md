@@ -56,5 +56,9 @@ Internal packages will not be displayed in go document
 
 You can show examples of how to use the method. Example method will start with the keyword Exampe followed by method name. It will be placed in test files. (refer fileUtils package)
 
-               
+# Benchmark
+
+Performance testing and it says how many times it called and how much time it took on average
+
+Method name starts with Benchmark<methodname> and when you want to run the benchmark , use the command go test -run=XXX -bench=.
           
