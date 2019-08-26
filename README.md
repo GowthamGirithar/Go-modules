@@ -62,3 +62,8 @@ Performance testing and it says how many times it called and how much time it to
 
 Method name starts with Benchmark<methodname> and when you want to run the benchmark , use the command go test -bench=. for running the tests and benchmark in current directory
 To run for all the files  > go test -bench=. ./...  
+   
+# CF deployment
+
+Manifest.yml file will be used for CF deployment.
+cf push command will perform deployment
