@@ -67,3 +67,9 @@ To run for all the files  > go test -bench=. ./...
 
 Manifest.yml file will be used for CF deployment.
 cf push command will perform deployment
+
+# Docker Image
+
+If anyone just want to perform operations and understand the code. Please use the docker image gowgi/golangexample:employee-service-golang
+
+docker run -p 8080:8080 gowgi/golangexample:employee-service-golang
