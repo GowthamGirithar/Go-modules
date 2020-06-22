@@ -36,6 +36,8 @@ and compiled commands (in GOPATH/bin)(for normal projects it will take from GOPA
    *  $ git tag v1.0.0
    *  $ git push --tags
    
+20. Main.main goes to bin folder when we do go get , otherprojects (dont have main.main) will be in src folder (local ones will be in src folder)
+   
 # Testing in Go
 
 Please have a look into test cases for handlers, models to understand the same (comments are added for learning)
